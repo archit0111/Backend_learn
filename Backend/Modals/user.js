@@ -4,7 +4,8 @@ const userSchema = new mongoose.Schema(
     {
         name:{
             type: String,
-            required: true 
+            required: true,
+            trim:true
         },
         email:{
             type: String,
@@ -17,6 +18,6 @@ const userSchema = new mongoose.Schema(
 
     }
 );
-const userModel = mongoose.Model(userSchema);
+const userModel = mongoose.model('users',userSchema);
 
 module.export = userModel;
